@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_dimens"
+        android:layout_weight=".25">
+
+        <TextView
+            android:id="@+id/tv_next"
+            style="@style/displayWText18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/next" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/margin_5dp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_dimens"
+        android:layout_weight=".25">
+
+        <TextView
+            android:id="@+id/tv_previous"
+            style="@style/displayWText18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/previous" />
+    </RelativeLayout>
+</LinearLayout>

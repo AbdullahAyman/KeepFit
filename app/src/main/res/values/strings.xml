@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">KeepFit</string>
+    <string name="baseURL">https://www.youtube.com/watch?v=</string>
+    <!--CardView Labels-->
+    <string name="labelExerciseName"> Running </string>
+    <string name="labelDuration">Duration : </string>
+    <string name="burned_calories">Burned Calories : </string>
+    <!--Recipe Video Steps-->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <!-- Warning Message-->
+    <string name="errorLoading">an error occur during loading </string>
+    <string name="firstStep">this is the first Step</string>
+    <string name="lastStep">this is the last Step</string>
+
+    <!--main Lunching Screens-->
+    <string name="exercise">Exercises</string>
+    <string name="meals">Meals</string>
+
+
+    <!-- About texts -->
+    <string name="about_part1">The KeepFit Workout originally appeared in the June 2017 issue of tps\'s Health and Fitness Journal. The workout consists of 12 high intensity body weight exercises. 30 ~ 150 seconds per exercise. 10 seconds rest between exercises.</string>
+    <string name="about_part2">Remember to always check with your doctor before exercising and seek professional help to ensure correct form of the exercises.</string>
+    <string name="about_part3">The workout videos from Youtube remain the owner\'s, please support them because they do amazing work making them available.</string>
+
+    <!-- Workout times -->
+    <string name="jumping_jacks_times"> 30 Sec</string>
+    <string name="wall_sits_times"> 75 Sec</string>
+    <string name="push_ups_times">69 Sec</string>
+    <string name="abdominal_crunches_times"> 180 Sec</string>
+    <string name="step_ups_onto_a_chair_times"> 90 Sec</string>
+    <string name="squats_times"> 111 Sec</string>
+    <string name="triceps_dips_on_a_chair_times">90 Sec</string>
+    <string name="planks_times"> 180 Sec</string>
+    <string name="high_knees_running_in_place_times"> 55 sec</string>
+    <string name="lunges_times"> 110 Sec</string>
+    <string name="push_ups_and_rotations_times"> 37 Sec</string>
+    <string name="side_planks_times"> 110 Sec</string>
+
+    <!-- Workout names -->
+    <string name="jumping_jacks">Jumping jacks</string>
+    <string name="wall_sits">Wall sits</string>
+    <string name="push_ups">Push-ups</string>
+    <string name="abdominal_crunches">Abdominal crunches</string>
+    <string name="step_ups_onto_a_chair">Step-ups onto a chair</string>
+    <string name="squats">Squats</string>
+    <string name="triceps_dips_on_a_chair">Triceps dips on a chair</string>
+    <string name="planks">Planks</string>
+    <string name="high_knees_running_in_place">High knees running in place</string>
+    <string name="lunges">Lunges</string>
+    <string name="push_ups_and_rotations">Push-ups and rotations</string>
+    <string name="side_planks">Side planks</string>
+
+    <!-- Workout description -->
+    <string name="jumping_jacks_desc">Start with your feet together and arms at your sides. Slightly bend your knees and jump straight up. As you are jumping kick your legs out to shoulder width and bring your hands over your head to form a "star".</string>
+    <string name="wall_sits_desc">Stand straight with your back against the wall with your legs shoulder width apart and a little away from the wall. Lower your hips until your legs are at right angles and then stand back up.</string>
+    <string name="push_ups_desc">Lay flat on your stomach with your palms flat on the floor approximately shoulder width apart. Push up on your hands until your arms are straight. Lower yourself until your arms are at 90-degrees. Repeat.</string>
+    <string name="abdominal_crunches_desc">A crunch begins with lying face up on the floor with knees bent. The movement begins by curling the shoulders towards the pelvis. The hands can be behind or beside the neck or crossed over the chest.</string>
+    <string name="step_ups_onto_a_chair_desc">Stand in front of the step, with your feet about shoulder width apart. Step up onto the step with one foot, followed by the other. Pause and then step off with the opposite foot. Repeat.</string>
+    <string name="squats_desc">Stand with your feet slightly wider than your hips and your toes pointed slightly out. Keeping your back straight lower your hips and bend your knees until you are parallel with the floor. Reverse until you are back in the original standing position.</string>
+    <string name="triceps_dips_on_a_chair_desc">Sit with the heels of your hands on the edge of a sturdy chair seat. Slide your bottom off the seat, and support your weight with your hands. Bend your elbows back, and slowly lower your butt toward the floor while keeping your elbows tucked in.</string>
+    <string name="planks_desc">Lay on your stomach and bend your elbows 90-degrees and rest your weight on your forearms. Your elbows should be directly beneath your shoulders, and your body should form a straight line from your head to your feet. Hold the position.</string>
+    <string name="high_knees_running_in_place_desc">Run on the spot lifting your knees as high as possible, swing your arms as if you were running normally.</string>
+    <string name="lunges_desc">Keep your upper body straight, with your shoulders back and relaxed and chin up. Step forward with one leg, lowering your hips until both knees are bent at about a 90-degree angle. Keep the weight in your heels as you push back up to the starting position.</string>
+    <string name="push_ups_and_rotations_desc">Perform a push-up, at top rotate the body into side-plank position with one arm on ground and other extended toward ceiling. Rotate back to top of push-up position. Perform push-up and repeat rotation to opposite side.</string>
+    <string name="side_planks_desc">Lay on your stomach and bend your elbows 90-degrees and rest your weight on your forearms (or hand if you prefer). Your elbows should be directly beneath your shoulders. Rotate 90-degrees so all your weight in on one forearm. Hold the position.</string>
+
+    <!-- Workout video -->
+    <string name="jumping_jacks_video">c4DAnQ6DtF8</string>
+    <string name="wall_sits_video">-0Q7Lds7B8A</string>
+    <string name="push_ups_video">Eh00_rniF8E</string>
+    <string name="abdominal_crunches_video">SHWgBc4Ahc8</string>
+    <string name="step_ups_onto_a_chair_video">u-QwO-Bbaro</string>
+    <string name="squats_video">aclHkVaku9U</string>
+    <string name="triceps_dips_on_a_chair_video">nx9gVDCnT84</string>
+    <string name="planks_video">ynUw0YsrmSg</string>
+    <string name="high_knees_running_in_place_video">oDdkytliOqE</string>
+    <string name="lunges_video">QOVaHwm-Q6U</string>
+    <string name="push_ups_and_rotations_video">uGqZONsnZa8</string>
+    <string name="side_planks_video">NXr4Fw8q60o</string>
+
+    <string-array name="workout_names">
+        <item>@string/jumping_jacks</item>
+        <item>@string/wall_sits</item>
+        <item>@string/push_ups</item>
+        <item>@string/abdominal_crunches</item>
+        <item>@string/step_ups_onto_a_chair</item>
+        <item>@string/squats</item>
+        <item>@string/triceps_dips_on_a_chair</item>
+        <item>@string/planks</item>
+        <item>@string/high_knees_running_in_place</item>
+        <item>@string/lunges</item>
+        <item>@string/push_ups_and_rotations</item>
+        <item>@string/side_planks</item>
+    </string-array>
+
+    <string-array name="workout_times">
+        <item>@string/jumping_jacks_times</item>
+        <item>@string/wall_sits_times</item>
+        <item>@string/push_ups_times</item>
+        <item>@string/abdominal_crunches_times</item>
+        <item>@string/step_ups_onto_a_chair_times</item>
+        <item>@string/squats_times</item>
+        <item>@string/triceps_dips_on_a_chair_times</item>
+        <item>@string/planks_times</item>
+        <item>@string/high_knees_running_in_place_times</item>
+        <item>@string/lunges_times</item>
+        <item>@string/push_ups_and_rotations_times</item>
+        <item>@string/side_planks_times</item>
+    </string-array>
+
+    <string-array name="workout_descriptions">
+        <item>@string/jumping_jacks_desc</item>
+        <item>@string/wall_sits_desc</item>
+        <item>@string/push_ups_desc</item>
+        <item>@string/abdominal_crunches_desc</item>
+        <item>@string/step_ups_onto_a_chair_desc</item>
+        <item>@string/squats_desc</item>
+        <item>@string/triceps_dips_on_a_chair_desc</item>
+        <item>@string/planks_desc</item>
+        <item>@string/high_knees_running_in_place_desc</item>
+        <item>@string/lunges_desc</item>
+        <item>@string/push_ups_and_rotations_desc</item>
+        <item>@string/side_planks_desc</item>
+    </string-array>
+
+    <string-array name="workout_videos">
+        <item>@string/jumping_jacks_video</item>
+        <item>@string/wall_sits_video</item>
+        <item>@string/push_ups_video</item>
+        <item>@string/abdominal_crunches_video</item>
+        <item>@string/step_ups_onto_a_chair_video</item>
+        <item>@string/squats_video</item>
+        <item>@string/triceps_dips_on_a_chair_video</item>
+        <item>@string/planks_video</item>
+        <item>@string/high_knees_running_in_place_video</item>
+        <item>@string/lunges_video</item>
+        <item>@string/push_ups_and_rotations_video</item>
+        <item>@string/side_planks_video</item>
+    </string-array>
+
+    <integer-array name="workout_images">
+        <item>@drawable/jumping</item>
+        <item>@drawable/wall_sits</item>
+        <item>@drawable/push_up</item>
+        <item>@drawable/abdominal_crunches</item>
+        <item>@drawable/step_ups_onto_a_chair_image</item>
+        <item>@drawable/squats_image</item>
+        <item>@drawable/triceps_dips_on_a_chair_image</item>
+        <item>@drawable/planks_image</item>
+        <item>@drawable/high_knees_running_in_place_image</item>
+        <item>@drawable/lunges_image</item>
+        <item>@drawable/push_ups_and_rotations_image</item>
+        <item>@drawable/side_planks_image</item>
+    </integer-array>
+
+</resources>

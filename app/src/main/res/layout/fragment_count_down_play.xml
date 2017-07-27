@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+        android:id="@+id/picker"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_15dp"
+        app:pointer_color="@color/colorPrimary"
+        app:pointer_halo_color="@color/pointer_halo_color"
+        app:pointer_size="16dp"
+        app:text_color="@color/colorPrimary"
+        app:text_size="48sp"
+        app:wheel_active_color="@color/colorPrimary"
+        app:wheel_unactive_color="@color/colorAccent" />
+
+    <TextView
+        style="@style/displayWText18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picker"
+        android:layout_margin="@dimen/margin_5dp"
+        android:background="@color/colorTrans"
+        android:gravity="start"
+        android:minLines="2"
+        android:text="@string/exercise"
+        android:textColor="@color/colorBlack"
+        android:textStyle="normal" />
+
+    <TextView
+        style="@style/displayWText18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_10dp"
+        android:text="@string/labelExerciseName" />
+</RelativeLayout>

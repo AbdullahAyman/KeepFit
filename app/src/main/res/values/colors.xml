@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F39C12</color>
+    <color name="colorPrimaryDark">#E67E22</color>
+    <color name="pointer_halo_color">#ccf39c12</color>
+    <color name="colorAccent">#f5c907ec</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#f7030303</color>
+    <color name="colorNavigationMenuBg">#35323b</color>
+    <color name="colorNavigationMenuBgTrans">#bf35323b</color>
+    <color name="colorOvalTrans">#ebdadada</color>
+    <color name="colorTrans">#01ffffff</color>
+</resources>
