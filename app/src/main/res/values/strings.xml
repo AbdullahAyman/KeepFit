@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">KeepFit</string>
+    <string name="base">https://www.youtube.com</string>
+
     <string name="baseURL">https://www.youtube.com/watch?v=</string>
     <!--CardView Labels-->
     <string name="labelExerciseName"> Running </string>

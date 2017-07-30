@@ -28,7 +28,7 @@ dependencies {
         exclude group: 'javax.inject'
     })
     compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
-    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+
     // Testing-only dependencies
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
     androidTestCompile("com.android.support:support-annotations:${supportLibVersion}")
@@ -47,6 +47,8 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
     /**
      * Butter knife Ui
      * */
@@ -87,7 +89,14 @@ dependencies {
     compile 'com.google.dagger:dagger-compiler:2.5'
     compile 'com.google.dagger:dagger:2.5'
     /**
-     *count down circular view
+     * count down circular view
      * */
     compile 'com.github.JesusM:HoloCircleSeekBar:v2.2.2'
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    /**
+     * swipe to refresh recyclerView
+     * */
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    compile 'com.github.orangegangsters:swipy:1.2.3@aar'
+
 }

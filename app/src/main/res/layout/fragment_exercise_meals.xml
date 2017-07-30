@@ -5,26 +5,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/all_layout_recycler_view"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+        <include layout="@layout/all_layout_recycler_view"></include>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lin_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:elevation="@dimen/margin_10dp">
+        android:elevation="@dimen/margin_10dp"
+        android:orientation="vertical">
 
         <include layout="@layout/layout_exercises_meals"></include>
     </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/play_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="16dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/exo_controls_play"
         app:borderWidth="2dp"
         app:fabSize="normal"

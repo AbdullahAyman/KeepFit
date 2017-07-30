@@ -16,8 +16,7 @@
             android:id="@+id/img_card"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/jumping" />
+            android:scaleType="centerInside" />
 
         <TextView
             android:id="@+id/item_card_tv_card_name"
@@ -60,6 +59,7 @@
             android:paddingStart="@dimen/margin_20dp"
             android:text="@string/burned_calories"
             android:textColor="@color/colorBlack"
-            android:textSize="@dimen/size_18sp" />
+            android:textSize="@dimen/size_18sp"
+            android:visibility="gone" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>
