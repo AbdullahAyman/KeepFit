@@ -1,6 +1,8 @@
 package tps.com.keepfit;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayoutDirection;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindBool;
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     int tabID = 0;
     MainCardsAdapter mainCardsAdapter;
     IMainActivityPresenter mainActivityPresenter;
+    List<CardsDataModel_> mCardListOfData;
 
     private void setUpGridRecyclerView() {
         GridLayoutManager lLayout;
@@ -91,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
         exercises.setOnClickListener(this);
 
         meals.setOnClickListener(this);
+        floatingActionButton.setOnClickListener(this);
+        this.onClick(exercises);
     }
 
     private void loadData(int i) {
@@ -128,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
 
     private void displayRecyclerData(List<CardsDataModel_> cardListOfData) {
         if (cardListOfData != null) {
+            mCardListOfData = cardListOfData;
             mainCardsAdapter.swapAdapterData(cardListOfData);
         }
     }
@@ -138,12 +145,35 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
         switch (Id) {
             case R.id.tv_meals:
                 loadData(1);
+                resetViewColors();
+                floatingActionButton.setVisibility(View.GONE);
+                meals.setTextColor(getResources().getColor(R.color.colorPrimary));
+                meals.setBackgroundColor(getResources().getColor(R.color.colorWhite));
                 break;
             case R.id.tv_exercise:
                 loadData(0);
+                resetViewColors();
+                floatingActionButton.setVisibility(View.VISIBLE);
+                exercises.setTextColor(getResources().getColor(R.color.colorPrimary));
+                exercises.setBackgroundColor(getResources().getColor(R.color.colorWhite));
+                break;
+            case R.id.play_fab:
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList(getString(R.string.mCardListOfData), (ArrayList<? extends Parcelable>) mCardListOfData);
+                FragmentPlayExercises mFragmentPlayExercises = new FragmentPlayExercises();
+                mFragmentPlayExercises.setArguments(bundle);
+                mFragmentPlayExercises.show(getFragmentManager().beginTransaction(),"Play Dialog");
                 break;
             default:
                 break;
         }
+    }
+
+    private void resetViewColors() {
+        meals.setTextColor(getResources().getColor(R.color.colorWhite));
+        meals.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        exercises.setTextColor(getResources().getColor(R.color.colorWhite));
+        exercises.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
     }
 }

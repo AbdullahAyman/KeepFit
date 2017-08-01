@@ -2,7 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/image_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="280dp" />
 
     <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
         android:id="@+id/picker"
@@ -13,26 +19,35 @@
         android:layout_margin="@dimen/margin_15dp"
         app:pointer_color="@color/colorPrimary"
         app:pointer_halo_color="@color/pointer_halo_color"
-        app:pointer_size="16dp"
+        app:pointer_size="5dp"
         app:text_color="@color/colorPrimary"
-        app:text_size="48sp"
+        app:text_size="36sp"
         app:wheel_active_color="@color/colorPrimary"
-        app:wheel_unactive_color="@color/colorAccent" />
+        app:wheel_size="5"
+        app:wheel_unactive_color="@color/colorGreen" />
 
-    <TextView
-        style="@style/displayWText18sp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/picker"
-        android:layout_margin="@dimen/margin_5dp"
-        android:background="@color/colorTrans"
-        android:gravity="start"
-        android:minLines="2"
-        android:text="@string/exercise"
-        android:textColor="@color/colorBlack"
-        android:textStyle="normal" />
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:id="@+id/exercise_description"
+            style="@style/displayWText18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_5dp"
+            android:background="@color/colorTrans"
+            android:gravity="start"
+            android:minLines="2"
+            android:text="@string/exercise"
+            android:textColor="@color/colorBlack"
+            android:textStyle="normal" />
+    </ScrollView>
 
     <TextView
+        android:id="@+id/exercise_name"
         style="@style/displayWText18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

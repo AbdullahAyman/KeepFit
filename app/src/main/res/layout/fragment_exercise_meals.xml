@@ -34,7 +34,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/exo_controls_play"
-        app:borderWidth="2dp"
+        app:borderWidth="0dp"
         app:fabSize="normal"
         app:layout_anchorGravity="bottom|right|end" />
 </RelativeLayout>

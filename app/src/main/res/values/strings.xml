@@ -7,7 +7,9 @@
     <string name="labelExerciseName"> Running </string>
     <string name="labelDuration">Duration : </string>
     <string name="burned_calories">Burned Calories : </string>
-    <!--Recipe Video Steps-->
+    <string name="Calories">Calories</string>
+    <string name="unKnown">unKnown</string>
+    <!--Video Steps-->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -21,25 +23,28 @@
     <string name="exercise">Exercises</string>
     <string name="meals">Meals</string>
 
-
+    <!--Constants-->
+    <string name="mCardListOfData">mCardListOfData</string>
+    <string name="currentStepId">currentStepId</string>
+    <string name="CURRENT_PLAYER_PERIOD">CURRENT_PLAYER_PERIOD</string>
     <!-- About texts -->
     <string name="about_part1">The KeepFit Workout originally appeared in the June 2017 issue of tps\'s Health and Fitness Journal. The workout consists of 12 high intensity body weight exercises. 30 ~ 150 seconds per exercise. 10 seconds rest between exercises.</string>
     <string name="about_part2">Remember to always check with your doctor before exercising and seek professional help to ensure correct form of the exercises.</string>
     <string name="about_part3">The workout videos from Youtube remain the owner\'s, please support them because they do amazing work making them available.</string>
 
     <!-- Workout times -->
-    <string name="jumping_jacks_times"> 30 Sec</string>
+    <string name="jumping_jacks_times"> 128 Sec</string>
     <string name="wall_sits_times"> 75 Sec</string>
-    <string name="push_ups_times">69 Sec</string>
-    <string name="abdominal_crunches_times"> 180 Sec</string>
-    <string name="step_ups_onto_a_chair_times"> 90 Sec</string>
-    <string name="squats_times"> 111 Sec</string>
-    <string name="triceps_dips_on_a_chair_times">90 Sec</string>
-    <string name="planks_times"> 180 Sec</string>
-    <string name="high_knees_running_in_place_times"> 55 sec</string>
-    <string name="lunges_times"> 110 Sec</string>
-    <string name="push_ups_and_rotations_times"> 37 Sec</string>
-    <string name="side_planks_times"> 110 Sec</string>
+    <string name="push_ups_times">63 Sec</string>
+    <string name="abdominal_crunches_times"> 73 Sec</string>
+    <string name="step_ups_onto_a_chair_times"> 75 Sec</string>
+    <string name="squats_times"> 75 Sec</string>
+    <string name="triceps_dips_on_a_chair_times">75 Sec</string>
+    <string name="planks_times"> 90 Sec</string>
+    <string name="high_knees_running_in_place_times"> 78 sec</string>
+    <string name="lunges_times"> 82 Sec</string>
+    <string name="push_ups_and_rotations_times"> 96 Sec</string>
+    <string name="side_planks_times"> 75 Sec</string>
 
     <!-- Workout names -->
     <string name="jumping_jacks">Jumping jacks</string>
@@ -52,7 +57,7 @@
     <string name="planks">Planks</string>
     <string name="high_knees_running_in_place">High knees running in place</string>
     <string name="lunges">Lunges</string>
-    <string name="push_ups_and_rotations">Push-ups and rotations</string>
+    <string name="push_ups_and_rotations">Mountain Climber</string>
     <string name="side_planks">Side planks</string>
 
     <!-- Workout description -->
@@ -66,22 +71,22 @@
     <string name="planks_desc">Lay on your stomach and bend your elbows 90-degrees and rest your weight on your forearms. Your elbows should be directly beneath your shoulders, and your body should form a straight line from your head to your feet. Hold the position.</string>
     <string name="high_knees_running_in_place_desc">Run on the spot lifting your knees as high as possible, swing your arms as if you were running normally.</string>
     <string name="lunges_desc">Keep your upper body straight, with your shoulders back and relaxed and chin up. Step forward with one leg, lowering your hips until both knees are bent at about a 90-degree angle. Keep the weight in your heels as you push back up to the starting position.</string>
-    <string name="push_ups_and_rotations_desc">Perform a push-up, at top rotate the body into side-plank position with one arm on ground and other extended toward ceiling. Rotate back to top of push-up position. Perform push-up and repeat rotation to opposite side.</string>
+    <string name="push_ups_and_rotations_desc">The "Mountain Climber" is one of the most famous cardio exercises. It is an advanced and high intensity exercise that increases heart rate, accelerates metabolism, helps build stronger leg strength and improves agility. Because of its complexity and effectiveness it is often used in Marines\' workouts and martial arts practitioners.</string>
     <string name="side_planks_desc">Lay on your stomach and bend your elbows 90-degrees and rest your weight on your forearms (or hand if you prefer). Your elbows should be directly beneath your shoulders. Rotate 90-degrees so all your weight in on one forearm. Hold the position.</string>
 
     <!-- Workout video -->
-    <string name="jumping_jacks_video">c4DAnQ6DtF8</string>
+    <string name="jumping_jacks_video">XR0xeuK5zBU</string>
     <string name="wall_sits_video">-0Q7Lds7B8A</string>
-    <string name="push_ups_video">Eh00_rniF8E</string>
-    <string name="abdominal_crunches_video">SHWgBc4Ahc8</string>
-    <string name="step_ups_onto_a_chair_video">u-QwO-Bbaro</string>
-    <string name="squats_video">aclHkVaku9U</string>
-    <string name="triceps_dips_on_a_chair_video">nx9gVDCnT84</string>
-    <string name="planks_video">ynUw0YsrmSg</string>
-    <string name="high_knees_running_in_place_video">oDdkytliOqE</string>
-    <string name="lunges_video">QOVaHwm-Q6U</string>
-    <string name="push_ups_and_rotations_video">uGqZONsnZa8</string>
-    <string name="side_planks_video">NXr4Fw8q60o</string>
+    <string name="push_ups_video">0-k1CkNGb4U</string>
+    <string name="abdominal_crunches_video">RXYwP2Z-kho</string>
+    <string name="step_ups_onto_a_chair_video">d6a1rGU2Ghw</string>
+    <string name="squats_video">rZdJexxyFRY</string>
+    <string name="triceps_dips_on_a_chair_video">BjFa9zSDO-E</string>
+    <string name="planks_video">4Xy4xTK5MWE</string>
+    <string name="high_knees_running_in_place_video">3x_XVz4I4vo</string>
+    <string name="lunges_video">IXZfc50nS_A</string>
+    <string name="push_ups_and_rotations_video">8nx457AH3gk</string>
+    <string name="side_planks_video">9Q0D6xAyrOI</string>
 
     <string-array name="workout_names">
         <item>@string/jumping_jacks</item>
@@ -158,4 +163,86 @@
         <item>@drawable/side_planks_image</item>
     </integer-array>
 
+
+    <!-- Recipe Calories -->
+    <string name="Tuna_Deviled_Eggs_70_calories"> 70 Calories</string>
+    <string name="Peanut_Butter_Balls_80calories"> 80 Calories</string>
+    <string name="Healthy_Oatmeal_480calories">500 Calories</string>
+    <string name="EggInAHole_calories"> 280 Calories</string>
+    <string name="Healthy_Omelette_calories"> 350 Calories</string>
+    <string name="WeightLossHealthySmoothieRecipes_calories"> unKnown</string>
+    <!-- meals names -->
+    <string name="Tuna_Deviled_Eggs">Tuna Deviled Eggs</string>
+    <string name="Peanut_Butter_Balls">Peanut Butter Balls Recipe</string>
+    <string name="Healthy_Oatmeal">3 Healthy Oatmeal</string>
+    <string name="EggInAHole">Egg In A Hole</string>
+    <string name="Healthy_Omelette">Omelet, Mushroom Omelette</string>
+    <string name="WeightLossHealthySmoothieRecipes">Weight Loss, Healthy Smoothie Recipes</string>
+
+    <!-- meals description -->
+    <string name="Tuna_Deviled_desc">Tuna contains a lot of vitamin D and light tuna contains all the more Vitamin D. The oil-packed ones help to retain more omega-3 fatty acids. Tuna offers abundance of immune-boosting selenium along with good amount of proteins.\n
+        Eggs - an organic egg will help you feel full all day. Eggs are a good source of protein and have 13 different vitamins and minerals, including iron and vitamin D. A study has found that folks who ate eggs were feeling less hungry through the day, eating about 330 fewer calories overall.</string>
+    <string name="Peanut_Butter_Balls_desc">Flax seed is best known for its fatty acids and fiber. When talking about omega fatty acids it is better ask what they can’t do then what they can. This powder plays its part in proper cardiovascular and immune system health, brain function, joint function, soft skin, and more.</string>
+
+    <string name="Healthy_Oatmeal_desc">Oatmeal is an ideal breakfast for cooler months and is arguably the world\'s healthiest breakfast food. It\'s whole-grain and high in soluble fiber, which helps you feel full and satisfied throughout your morning.</string>
+    <string name="EggInAHole_desc">People who have the highest olive consumption eat fewer calories overall and are rarely overweight. Blood tests show they have higher levels of serotonin, a so-called satiety hormone that makes us feel full.
+    \n The aroma extracts from olive oil can leave us feeling fuller, cutting our calorie intake by almost 200 a day, they said.</string>
+    <string name="Healthy_Omelette_desc"> Mushrooms are filling, nutritious, and full of flavour. They also contain natural compounds that can help you lose weight, prevent cancer, and strengthen your immune system. These vegetables can replace meat in most dishes, offering significant amounts of protein. They help stabilize blood sugar levels, protect against tissue damage, and improve body composition.</string>
+    <string name="WeightLossHealthySmoothieRecipes_desc">an easy recipe that is totally refreshing and balanced is to blend 1 banana, with half a cup of strawberries, 1 cup of raw spinach and ½ cup of almond or coconut milk. </string>
+
+    <!-- meals video -->
+    <string name="Tuna_Deviled_video">jJgzggj3ens</string>
+    <string name="Peanut_Butter_Balls_video">H8dMRaejgeE</string>
+    <string name="Healthy_Oatmeal_video">oANHCv2GBBQ</string>
+    <string name="EggInAHole_video">IPKgZD_fbmA</string>
+    <string name="Healthy_Omelette_video">MSWz633UuAo</string>
+    <string name="WeightLossHealthySmoothieRecipes_video">5Njo6ydcblk</string>
+
+    <string-array name="meals_names">
+        <item>@string/Tuna_Deviled_Eggs</item>
+        <item>@string/Peanut_Butter_Balls</item>
+        <item>@string/Healthy_Oatmeal</item>
+        <item>@string/EggInAHole</item>
+        <item>@string/Healthy_Omelette</item>
+        <item>@string/WeightLossHealthySmoothieRecipes</item>
+
+    </string-array>
+
+    <string-array name="meals_calories">
+        <item>@string/Tuna_Deviled_Eggs_70_calories</item>
+        <item>@string/Peanut_Butter_Balls_80calories</item>
+        <item>@string/Healthy_Oatmeal_480calories</item>
+        <item>@string/EggInAHole_calories</item>
+        <item>@string/Healthy_Omelette_calories</item>
+        <item>@string/WeightLossHealthySmoothieRecipes_calories</item>
+
+    </string-array>
+
+    <string-array name="meals_descriptions">
+        <item>@string/Tuna_Deviled_desc</item>
+        <item>@string/Peanut_Butter_Balls_desc</item>
+        <item>@string/Healthy_Oatmeal_desc</item>
+        <item>@string/EggInAHole_desc</item>
+        <item>@string/Healthy_Omelette_desc</item>
+        <item>@string/WeightLossHealthySmoothieRecipes_desc</item>
+    </string-array>
+
+    <string-array name="meals_videos">
+        <item>@string/Tuna_Deviled_video</item>
+        <item>@string/Peanut_Butter_Balls_video</item>
+        <item>@string/Healthy_Oatmeal_video</item>
+        <item>@string/EggInAHole_video</item>
+        <item>@string/Healthy_Omelette_video</item>
+        <item>@string/WeightLossHealthySmoothieRecipes_video</item>
+
+    </string-array>
+
+    <integer-array name="meals_images">
+        <item>@drawable/tuna_deviled_egg</item>
+        <item>@drawable/peanut_butter_balls</item>
+        <item>@drawable/healthy_oatmeal</item>
+        <item>@drawable/all_in_egg</item>
+        <item>@drawable/mshroum</item>
+        <item>@drawable/smoothies</item>
+    </integer-array>
 </resources>

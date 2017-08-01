@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 
 import java.util.ArrayList;
 
+import tps.com.keepfit.utilities.KeepFitApp;
+
 public class BakingSharedPreference {
     private Context mContext;
     private SharedPreferences mPreference;
@@ -15,7 +17,7 @@ public class BakingSharedPreference {
      */
     public BakingSharedPreference(Context context) {
         mContext = context;
-        mPreference = /*KeepFitApp.newInstance().getSharedPreferences()*/PreferenceManager.getDefaultSharedPreferences(mContext);
+        mPreference = KeepFitApp.newInstance().getSharedPreferences()/*PreferenceManager.getDefaultSharedPreferences(mContext)*/;
     }
 
     /**

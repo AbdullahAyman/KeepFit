@@ -57,16 +57,16 @@ public class MainActivityInteractor implements IMainActivityInteractor {
     private CardsDataModel getMealsCards() {
         CardsDataModel cardsDataModel = new CardsDataModel();
         List<CardsDataModel_> cardsDataList = new ArrayList<>();
-        TypedArray workOutImages = loadWorkOutImages();
+        TypedArray mealsImages = loadMealsImages();
         String[] loadMealsTimes = loadMealsTimes();
         String[] loadMealsNames = loadMealsNames();
         String[] loadMealsDescription = loadMealsDescription();
         String[] loadMealsVideos = loadMealsVideos();
-        for (int i = 0; i < workOutImages.length(); i++) {
+        for (int i = 0; i < mealsImages.length(); i++) {
             CardsDataModel_ cardsDataItem = new CardsDataModel_();
             cardsDataItem.setCardDescription(loadMealsDescription[i]);
             cardsDataItem.setCardDuration(loadMealsTimes[i]);
-            cardsDataItem.setCardImage(workOutImages.getResourceId(i, -1));
+            cardsDataItem.setCardImage(mealsImages.getResourceId(i, -1));
             cardsDataItem.setCardName(loadMealsNames[i]);
             cardsDataItem.setCardVideoURL(loadMealsVideos[i]);
             cardsDataList.add(cardsDataItem);
@@ -104,26 +104,26 @@ public class MainActivityInteractor implements IMainActivityInteractor {
 
     @Override
     public TypedArray loadMealsImages() {
-        return mContext.getResources().obtainTypedArray(R.array.workout_images);
+        return mContext.getResources().obtainTypedArray(R.array.meals_images);
     }
 
     @Override
     public String[] loadMealsTimes() {
-        return mContext.getResources().getStringArray(R.array.workout_times);
+        return mContext.getResources().getStringArray(R.array.meals_calories);
     }
 
     @Override
     public String[] loadMealsNames() {
-        return mContext.getResources().getStringArray(R.array.workout_names);
+        return mContext.getResources().getStringArray(R.array.meals_names);
     }
 
     @Override
     public String[] loadMealsDescription() {
-        return mContext.getResources().getStringArray(R.array.workout_descriptions);
+        return mContext.getResources().getStringArray(R.array.meals_descriptions);
     }
 
     @Override
     public String[] loadMealsVideos() {
-        return mContext.getResources().getStringArray(R.array.workout_videos);
+        return mContext.getResources().getStringArray(R.array.meals_videos);
     }
 }

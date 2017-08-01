@@ -1,6 +1,9 @@
 package tps.com.keepfit.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindString;
@@ -18,6 +22,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.R;
+import tps.com.keepfit.StepsActivity;
+import tps.com.keepfit.utilities.YoutubeVideoPlayer;
 
 /**
  * Created by aayman on 7/30/2017.
@@ -49,20 +55,33 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
     }
 
     @Override
-    public void onBindViewHolder(MainCardsHolder holder, int position) {
-        /*mPicasso.with(mContext)
+    public void onBindViewHolder(MainCardsHolder holder, final int position) {
+        mPicasso.with(mContext)
                 .load((int) mCardListData.get(position).getCardImage())
                 .error(R.drawable.jumping)
-                .into(holder.cardImage);*/
+                .into(holder.cardImage);
         if ((int) mCardListData.get(position).getCardImage() != -1)
-            holder.cardImage.setImageResource((int) mCardListData.get(position).getCardImage());
-        holder.cardDuration.setText(holder.duration + " " + mCardListData.get(position).getCardDuration());
+            mPicasso.with(mContext)
+                    .load((int) mCardListData.get(position).getCardImage())
+                    .error(R.drawable.jumping)
+                    .into(holder.cardImage);
+        //holder.cardImage.setImageResource((int) mCardListData.get(position).getCardImage());
+        if (mCardListData.get(position).getCardDuration().contains(holder.Calories) || mCardListData.get(position).getCardDuration().contains(holder.unKnown))
+            holder.cardDuration.setText(holder.burnedCaloriesLabel + " " + mCardListData.get(position).getCardDuration());
+        else
+            holder.cardDuration.setText(holder.duration + " " + mCardListData.get(position).getCardDuration());
         holder.cardName.setText(mCardListData.get(position).getCardName());
 
         final String fullUrl = holder.baseURL + mCardListData.get(position).getCardVideoURL();
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(mContext, YoutubeVideoPlayer.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList(mContext.getString(R.string.mCardListOfData), (ArrayList<? extends Parcelable>) mCardListData);
+                bundle.putInt(mContext.getString(R.string.currentStepId), position);
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
                 Toast.makeText(mContext, "" + fullUrl, Toast.LENGTH_LONG).show();
             }
         });
@@ -91,6 +110,10 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
         String burnedCaloriesLabel;
         @BindString(R.string.baseURL)
         String baseURL;
+        @BindString(R.string.Calories)
+        String Calories;
+        @BindString(R.string.unKnown)
+        String unKnown;
 
         View mView;
 

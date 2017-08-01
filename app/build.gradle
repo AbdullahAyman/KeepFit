@@ -27,76 +27,83 @@ dependencies {
         /* exclude group: 'com.android.support', module: 'support-annotations'*/
         exclude group: 'javax.inject'
     })
-    compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
-
     // Testing-only dependencies
-    compile 'com.jpardogo.materialtabstrip:library:1.0.9'
-    androidTestCompile("com.android.support:support-annotations:${supportLibVersion}")
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
-    androidTestCompile 'com.android.support.test:rules:0.5'
-    androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
+    androidTestCompile "com.android.support:support-annotations:${supportLibVersion}"
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0')
+    {
         exclude group: 'com.android.support', module: 'appcompat'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude module: 'recyclerview-v7'
     }
-    compile("com.android.support:cardview-v7:${supportLibVersion}")
-    compile("com.android.support:appcompat-v7:${supportLibVersion}")
-    compile("com.android.support:design:${supportLibVersion}")
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    testCompile 'junit:junit:4.12'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    compile "com.android.support:cardview-v7:${supportLibVersion}"
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+    /**
+     *  Butter knife Ui
+     * */
 
     /**
-     * Butter knife Ui
+     *  Network Connectivity
      * */
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
     /**
-     * Network Connectivity
+     *  YO YO Animation
      * */
+
+    /**
+     *  Exo Player
+     * */
+
+    /**
+     *  RxJava
+     * */
+
+    /**
+     *  dagger
+     * */
+
+    /**
+     *  count down circular view
+     * */
+
+    /**
+     *  swipe to refresh recyclerView
+     * */
+    compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
+    compile 'com.jpardogo.materialtabstrip:library:1.0.9'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.fatboyindustrial.gson-jodatime-serialisers:gson-jodatime-serialisers:1.2.0'
-
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
-
-    /**
-     * YO YO Animation
-     * */
     compile 'com.daimajia.easing:library:2.0@aar'
-    /**
-     * Exo Player
-     * */
-    compile 'com.google.android.exoplayer:exoplayer-ui:r2.4.1'
+    compile 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+    compile 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+    compile 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+    compile 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
     compile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    /**
-     * RxJava
-     * */
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
     compile 'com.jakewharton.rxrelay:rxrelay:1.1.0'
     compile 'com.twistedequations.rx:rx-savestate:1.0.0'
     compile 'com.twistedequations.rx:rx-android-schedulers:1.1.0'
-    /**
-     * dagger
-     * */
     compile 'com.google.dagger:dagger-compiler:2.5'
     compile 'com.google.dagger:dagger:2.5'
-    /**
-     * count down circular view
-     * */
     compile 'com.github.JesusM:HoloCircleSeekBar:v2.2.2'
     compile 'com.jakewharton.timber:timber:4.5.1'
-    /**
-     * swipe to refresh recyclerView
-     * */
     compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
     compile 'com.github.orangegangsters:swipy:1.2.3@aar'
-
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }
