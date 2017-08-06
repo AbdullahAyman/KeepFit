@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.0"
@@ -9,6 +9,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,20 +25,21 @@ ext {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        /* exclude group: 'com.android.support', module: 'support-annotations'*/
+        /*exclude group: 'com.android.support', module: 'support-annotations'*/
         exclude group: 'javax.inject'
     })
     // Testing-only dependencies
     androidTestCompile "com.android.support:support-annotations:${supportLibVersion}"
     androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0')
-    {
-        exclude group: 'com.android.support', module: 'appcompat'
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude module: 'recyclerview-v7'
-    }
+            {
+                exclude group: 'com.android.support', module: 'appcompat'
+                exclude group: 'com.android.support', module: 'support-v4'
+                exclude module: 'recyclerview-v7'
+            }
     compile "com.android.support:cardview-v7:${supportLibVersion}"
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:design:${supportLibVersion}"
+    compile "com.android.support:support-v4:${supportLibVersion}"
     /**
      *  Butter knife Ui
      * */
@@ -69,6 +71,11 @@ dependencies {
     /**
      *  swipe to refresh recyclerView
      * */
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.dagger:dagger:2.5'
+
+    compile 'com.google.dagger:dagger-compiler:2.5'
     compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
@@ -79,7 +86,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.fatboyindustrial.gson-jodatime-serialisers:gson-jodatime-serialisers:1.2.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    /* compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'*/
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.daimajia.easing:library:2.0@aar'
     compile 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
@@ -88,22 +95,25 @@ dependencies {
     compile 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
     compile 'com.android.support.test.espresso:espresso-core:2.2.2'
     compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxjava:1.1.6'
+
+    /*
+ compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
-    compile 'com.jakewharton.rxrelay:rxrelay:1.1.0'
-    compile 'com.twistedequations.rx:rx-savestate:1.0.0'
-    compile 'com.twistedequations.rx:rx-android-schedulers:1.1.0'
-    compile 'com.google.dagger:dagger-compiler:2.5'
-    compile 'com.google.dagger:dagger:2.5'
+     compile 'com.jakewharton.rxrelay:rxrelay:1.1.0'
+     compile 'com.twistedequations.rx:rx-savestate:1.0.0'
+     compile 'com.twistedequations.rx:rx-android-schedulers:1.1.0'
+ */
     compile 'com.github.JesusM:HoloCircleSeekBar:v2.2.2'
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
     compile 'com.github.orangegangsters:swipy:1.2.3@aar'
+    compile 'com.google.android.gms:play-services-maps:9.0.0'
+    /* compile 'com.android.support:appcompat-v7:25.3.1'*/
+    compile 'com.google.android.gms:play-services-ads:9.0.0'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.android.support.test:runner:0.5'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

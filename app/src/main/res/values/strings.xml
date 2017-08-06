@@ -2,7 +2,14 @@
     <string name="app_name">KeepFit</string>
     <string name="base">https://www.youtube.com</string>
 
+    <!--
+    showing list of places of type GYM nearest to me
+    https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=30.108829,31.377641&radius=1500&types=GYM&name=cruise&key=-->
     <string name="baseURL">https://www.youtube.com/watch?v=</string>
+    <string name="nearestLocation">https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=</string>
+    <string name="radius">&amp;radius=</string>
+    <string name="googleKey">AIzaSyCZ68uVweLsjZjFjNreE9jl_dSPbKlSuP4</string>
+    <string name="remainString">&amp;types=GYM&amp;name=GYM&amp;key=</string>
     <!--CardView Labels-->
     <string name="labelExerciseName"> Running </string>
     <string name="labelDuration">Duration : </string>
@@ -14,6 +21,9 @@
     <string name="previous">Previous</string>
 
 
+    <!--google ads-->
+    <string name="adUnitID">ca-app-pub-3740402010807018/6661829430</string>
+    <string name="adUnitIDTest">ca-app-pub-3940256099942544/6300978111</string>
     <!-- Warning Message-->
     <string name="errorLoading">an error occur during loading </string>
     <string name="firstStep">this is the first Step</string>
@@ -87,6 +97,20 @@
     <string name="lunges_video">IXZfc50nS_A</string>
     <string name="push_ups_and_rotations_video">8nx457AH3gk</string>
     <string name="side_planks_video">9Q0D6xAyrOI</string>
+    <!-- Workout images -->
+    <string name="jumping_jacks_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsZ1o4aE5sWkM5LVE</string>
+    <string name="wall_sits_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsTmR1MWlyWnQzdW8</string>
+    <string name="push_ups_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsMzN6X1U3aDM2cmM</string>
+    <string name="abdominal_crunches_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsWTBHSFlCVXVvclk</string>
+    <string name="step_ups_onto_a_chair_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsSWQ5LW5jUnFlZVk</string>
+    <string name="squats_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsMU9jRVVDMTdRLXc</string>
+    <string name="triceps_dips_on_a_chair_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsUjZQUERWbVpkaHM</string>
+    <string name="planks_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsQ2thRzRWYkRLdlU</string>
+    <string name="high_knees_running_in_place_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsLTJTamZadzYzVEE</string>
+    <string name="lunges_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsZnVSc1oxTm5tSXc</string>
+    <string name="push_ups_and_rotations_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsazZtcTFSZE9SUkE</string>
+    <string name="side_planks_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsMk5PTG1maVMzRlE</string>
+
 
     <string-array name="workout_names">
         <item>@string/jumping_jacks</item>
@@ -162,7 +186,35 @@
         <item>@drawable/push_ups_and_rotations_image</item>
         <item>@drawable/side_planks_image</item>
     </integer-array>
+    <string-array name="work_outImagesURL">
+        <item>@string/jumping_jacks_img_url</item>
+        <item>@string/wall_sits_img_url</item>
+        <item>@string/push_ups_img_url</item>
+        <item>@string/abdominal_crunches_img_url</item>
+        <item>@string/step_ups_onto_a_chair_img_url</item>
+        <item>@string/squats_img_url</item>
+        <item>@string/triceps_dips_on_a_chair_img_url</item>
+        <item>@string/planks_img_url</item>
+        <item>@string/high_knees_running_in_place_img_url</item>
+        <item>@string/lunges_img_url</item>
+        <item>@string/push_ups_and_rotations_img_url</item>
+        <item>@string/side_planks_img_url</item>
+    </string-array>
 
+    <string-array name="mealsImagesURL">
+        <item>@string/jumping_jacks_img_url</item>
+        <item>@string/wall_sits_img_url</item>
+        <item>@string/push_ups_img_url</item>
+        <item>@string/abdominal_crunches_img_url</item>
+        <item>@string/step_ups_onto_a_chair_img_url</item>
+        <item>@string/squats_img_url</item>
+        <item>@string/triceps_dips_on_a_chair_img_url</item>
+        <item>@string/planks_img_url</item>
+        <item>@string/high_knees_running_in_place_img_url</item>
+        <item>@string/lunges_img_url</item>
+        <item>@string/push_ups_and_rotations_img_url</item>
+        <item>@string/side_planks_img_url</item>
+    </string-array>
 
     <!-- Recipe Calories -->
     <string name="Tuna_Deviled_Eggs_70_calories"> 70 Calories</string>
@@ -198,6 +250,14 @@
     <string name="Healthy_Omelette_video">MSWz633UuAo</string>
     <string name="WeightLossHealthySmoothieRecipes_video">5Njo6ydcblk</string>
 
+    <!-- meals images -->
+    <string name="Tuna_Deviled_Eggs_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsTml1UTFRTXd1X1k</string>
+    <string name="Peanut_Butter_Balls_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsc0REc1BrdEowT1U</string>
+    <string name="Healthy_Oatmeal_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsVUYyVlExZlFFQ28</string>
+    <string name="EggInAHole_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsVVlSSUh1d2l2aW8</string>
+    <string name="Healthy_Omelette_img_url">https://drive.google.com/open?id=0B8IFDefAxdHsTHhSaWFHREZsdXM</string>
+    <string name="WeightLossHealthySmoothieRecipes_url">https://drive.google.com/open?id=0B8IFDefAxdHsTHZCQkJxcUFIckE</string>
+
     <string-array name="meals_names">
         <item>@string/Tuna_Deviled_Eggs</item>
         <item>@string/Peanut_Butter_Balls</item>
@@ -205,6 +265,15 @@
         <item>@string/EggInAHole</item>
         <item>@string/Healthy_Omelette</item>
         <item>@string/WeightLossHealthySmoothieRecipes</item>
+
+    </string-array>
+    <string-array name="meals_imagesURL">
+        <item>@string/Tuna_Deviled_Eggs_img_url</item>
+        <item>@string/Peanut_Butter_Balls_img_url</item>
+        <item>@string/Healthy_Oatmeal_img_url</item>
+        <item>@string/EggInAHole_img_url</item>
+        <item>@string/Healthy_Omelette_img_url</item>
+        <item>@string/WeightLossHealthySmoothieRecipes_url</item>
 
     </string-array>
 
@@ -245,4 +314,7 @@
         <item>@drawable/mshroum</item>
         <item>@drawable/smoothies</item>
     </integer-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_nearest_places">Map</string>
 </resources>

@@ -51,18 +51,19 @@
         android:ellipsize="marquee"
         android:fadingEdge="vertical"
         android:focusable="true"
-        android:paddingEnd="@dimen/margin_10dp"
-        android:paddingStart="@dimen/margin_20dp"
         android:focusableInTouchMode="true"
         android:isScrollContainer="true"
         android:marqueeRepeatLimit="marquee_forever"
         android:nextFocusLeft="@+id/widget_card_bake_ingredient"
         android:nextFocusUp="@+id/widget_card_bake_ingredient"
+        android:paddingEnd="@dimen/margin_10dp"
+        android:paddingStart="@dimen/margin_20dp"
         android:scrollHorizontally="true"
         android:scrollbars="vertical"
         android:text="@string/burned_calories"
         android:textColor="@color/colorNavigationMenuBg"
-        android:textSize="@dimen/size_14sp">
+        android:textSize="@dimen/size_14sp"
+        android:visibility="gone">
 
     </TextView>
 </RelativeLayout>

@@ -1,7 +1,6 @@
 package tps.com.keepfit.utilities;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,7 +15,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.R;
-import tps.com.keepfit.StepsActivity;
 
 /**
  * Created by aayman on 8/1/2017.

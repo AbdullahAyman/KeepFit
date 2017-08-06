@@ -6,23 +6,32 @@ import android.content.SharedPreferences;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import timber.log.Timber;
+import tps.com.keepfit.DataModel.CardsDataModel;
+import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.Interfaces.Component.DaggerKeepFitComponent;
 import tps.com.keepfit.Interfaces.Component.KeepFitComponent;
+import tps.com.keepfit.Interfaces.IMainActivityPresenter;
+import tps.com.keepfit.Interfaces.IMainActivityViews;
 import tps.com.keepfit.Modules.ContextModule;
 import tps.com.keepfit.Networking.Interfaces.RetrofitInterface;
+import tps.com.keepfit.Presenters.MainActivityPresenter;
 import tps.com.keepfit.R;
 
 
-public class KeepFitApp extends Application {
+public class KeepFitApp extends Application implements IMainActivityViews {
+    public static List<CardsDataModel_> cardListOfData = null;
     private static String BASE_URL = "";
     private static RetrofitInterface retrofitInterface;
     private static KeepFitComponent keepFitComponent;
     private static SharedPreferences sharedPreferences;
     private static Picasso picasso;
     private static Context mContext;
+    IMainActivityPresenter iMainActivityViews;
 
     public static KeepFitApp newInstance() {
         return new KeepFitApp();
@@ -44,6 +53,10 @@ public class KeepFitApp extends Application {
         picasso = keepFitComponent.getPicasso();
         sharedPreferences = keepFitComponent.getSharedPreferences();
         mContext = keepFitComponent.getKeepFitContext();
+        if (iMainActivityViews == null) {
+            iMainActivityViews = new MainActivityPresenter(this);
+            iMainActivityViews.loadExercises();
+        }
     }
 
 
@@ -74,4 +87,19 @@ public class KeepFitApp extends Application {
         return mContext;
     }
 
+    @Override
+    public void showProgress() {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void displayViewData(CardsDataModel dataModel) {
+        if (dataModel.getCardsDataModel() != null)
+            cardListOfData = dataModel.getCardsDataModel();
+    }
 }

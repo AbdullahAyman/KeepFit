@@ -1,6 +1,6 @@
-package tps.com.keepfit;
+package tps.com.keepfit.Views;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +13,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayoutDirection;
 
@@ -22,12 +25,14 @@ import java.util.List;
 import butterknife.BindBool;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import tps.com.keepfit.Adapters.MainCardsAdapter;
 import tps.com.keepfit.DataModel.CardsDataModel;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.Interfaces.IMainActivityPresenter;
 import tps.com.keepfit.Interfaces.IMainActivityViews;
 import tps.com.keepfit.Presenters.MainActivityPresenter;
+import tps.com.keepfit.R;
 import tps.com.keepfit.utilities.KeepFitApp;
 
 public class MainActivity extends AppCompatActivity implements IMainActivityViews, View.OnClickListener {
@@ -44,11 +49,18 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     RecyclerView mRecyclerView;
     @BindBool(R.bool.isTablet)
     boolean isTab;
-
+    @BindView(R.id.adView)
+    AdView googleAdds;
     int tabID = 0;
     MainCardsAdapter mainCardsAdapter;
     IMainActivityPresenter mainActivityPresenter;
     List<CardsDataModel_> mCardListOfData;
+
+    @OnClick(R.id.toolbar_menu_img)
+    void openMap() {
+        Intent intent = new Intent(MainActivity.this, NearestPlacesActivity.class);
+        startActivity(intent);
+    }
 
     private void setUpGridRecyclerView() {
         GridLayoutManager lLayout;
@@ -85,6 +97,13 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        MobileAds.initialize(getApplicationContext(),
+                getString(R.string.adUnitIDTest));
+        AdRequest request = new AdRequest.Builder()
+                .addTestDevice("33BE2250B43518CCDA7DE426D04EE232")
+                .build();
+        if (request.isTestDevice(this))
+            googleAdds.loadAd(request);
         setupRefreshTool();
         if (isTab)
             setUpGridRecyclerView();
@@ -162,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
                 bundle.putParcelableArrayList(getString(R.string.mCardListOfData), (ArrayList<? extends Parcelable>) mCardListOfData);
                 FragmentPlayExercises mFragmentPlayExercises = new FragmentPlayExercises();
                 mFragmentPlayExercises.setArguments(bundle);
-                mFragmentPlayExercises.show(getFragmentManager().beginTransaction(),"Play Dialog");
+                mFragmentPlayExercises.show(getFragmentManager().beginTransaction(), "Play Dialog");
                 break;
             default:
                 break;

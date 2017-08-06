@@ -22,7 +22,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.R;
-import tps.com.keepfit.StepsActivity;
 import tps.com.keepfit.utilities.YoutubeVideoPlayer;
 
 /**
@@ -56,12 +55,12 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
 
     @Override
     public void onBindViewHolder(MainCardsHolder holder, final int position) {
-        mPicasso.with(mContext)
+        /*mPicasso.with(mContext)
                 .load((int) mCardListData.get(position).getCardImage())
                 .error(R.drawable.jumping)
-                .into(holder.cardImage);
+                .into(holder.cardImage);*/
         if ((int) mCardListData.get(position).getCardImage() != -1)
-            mPicasso.with(mContext)
+            Picasso.with(mContext)
                     .load((int) mCardListData.get(position).getCardImage())
                     .error(R.drawable.jumping)
                     .into(holder.cardImage);

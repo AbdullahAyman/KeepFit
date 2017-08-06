@@ -1,4 +1,4 @@
-package tps.com.keepfit;
+package tps.com.keepfit.Views;
 
 import android.app.DialogFragment;
 import android.os.Build;
@@ -16,6 +16,7 @@ import com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar;
 import java.util.List;
 
 import tps.com.keepfit.DataModel.CardsDataModel_;
+import tps.com.keepfit.R;
 
 /**
  * Created by aayman on 7/31/2017.

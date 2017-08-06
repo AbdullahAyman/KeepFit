@@ -1,4 +1,4 @@
-package tps.com.keepfit;
+package tps.com.keepfit.Views;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,9 +35,9 @@ import java.util.List;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Optional;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.Prefrences.BakingSharedPreference;
+import tps.com.keepfit.R;
 
 public class StepsActivity extends AppCompatActivity {
 
