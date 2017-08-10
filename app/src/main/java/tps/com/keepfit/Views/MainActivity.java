@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     RecyclerView mRecyclerView;
     @BindBool(R.bool.isTablet)
     boolean isTab;
+    @BindView(R.id.toolbar_title)
+    TextView activityTitle;
     @BindView(R.id.adView)
     AdView googleAdds;
     int tabID = 0;
@@ -97,12 +99,12 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        MobileAds.initialize(getApplicationContext(),
+        MobileAds.initialize(this,
                 getString(R.string.adUnitIDTest));
         AdRequest request = new AdRequest.Builder()
-                .addTestDevice("33BE2250B43518CCDA7DE426D04EE232")
+                .addTestDevice(getString(R.string.adUnitIDTest))
                 .build();
-        if (request.isTestDevice(this))
+        //if (request.isTestDevice(this))
             googleAdds.loadAd(request);
         setupRefreshTool();
         if (isTab)
@@ -121,10 +123,14 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     private void loadData(int i) {
         showProgress();
         tabID = i;
-        if (i == 0)
+        if (i == 0) {
             mainActivityPresenter.loadExercises();
-        else
+            activityTitle.setText(getString(R.string.exercise));
+        } else {
             mainActivityPresenter.loadMeals();
+            activityTitle.setText(getString(R.string.meals));
+
+        }
     }
 
 

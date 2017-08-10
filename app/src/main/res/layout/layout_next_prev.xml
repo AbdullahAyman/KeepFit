@@ -25,7 +25,10 @@
         android:layout_height="match_parent"
         android:layout_weight="0.5"
         android:background="@color/colorWhite"
-        android:elevation="@dimen/margin_5dp" />
+        android:elevation="@dimen/margin_5dp">
+
+
+    </View>
 
     <RelativeLayout
         android:layout_width="0dp"

@@ -33,7 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.StepsActivity" />
+        <activity android:name=".Views.StepsActivity"></activity>
         <activity android:name=".utilities.YoutubeVideoPlayer" />
 
         <receiver android:name=".Views.KeepFitWidget">
