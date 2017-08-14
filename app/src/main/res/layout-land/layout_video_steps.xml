@@ -7,10 +7,19 @@
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:minHeight="300dp"
+        android:visibility="invisible"
         app:fastforward_increment="3000"
-        app:resize_mode="fit"
+        app:resize_mode="fixed_height"
         app:rewind_increment="3000" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
     <TextView

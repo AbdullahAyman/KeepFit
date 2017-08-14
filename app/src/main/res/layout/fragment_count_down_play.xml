@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/image_exercise"
         android:layout_width="match_parent"
-        android:layout_height="280dp" />
+        android:layout_height="280dp"
+        android:contentDescription="@string/imgExercise" />
 
     <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
         android:id="@+id/picker"

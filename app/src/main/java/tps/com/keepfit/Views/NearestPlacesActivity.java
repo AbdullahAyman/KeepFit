@@ -2,6 +2,7 @@ package tps.com.keepfit.Views;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -66,6 +67,8 @@ public class NearestPlacesActivity extends FragmentActivity implements OnMapRead
                     }
                 }
             }
+        } else {
+            Toast.makeText(this, "unavailable location search!", Toast.LENGTH_SHORT).show();
         }
     }
 }

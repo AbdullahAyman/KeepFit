@@ -1,9 +1,13 @@
 package tps.com.keepfit.Views;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -60,8 +64,16 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
 
     @OnClick(R.id.toolbar_menu_img)
     void openMap() {
-        Intent intent = new Intent(MainActivity.this, NearestPlacesActivity.class);
-        startActivity(intent);
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    0);
+        } else {
+            Intent intent = new Intent(MainActivity.this, NearestPlacesActivity.class);
+            startActivity(intent);
+        }
     }
 
     private void setUpGridRecyclerView() {
@@ -105,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
                 .addTestDevice(getString(R.string.adUnitIDTest))
                 .build();
         //if (request.isTestDevice(this))
-            googleAdds.loadAd(request);
+        googleAdds.loadAd(request);
         setupRefreshTool();
         if (isTab)
             setUpGridRecyclerView();

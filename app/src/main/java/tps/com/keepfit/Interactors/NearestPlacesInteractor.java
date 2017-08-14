@@ -1,6 +1,7 @@
 package tps.com.keepfit.Interactors;
 
 import android.content.Context;
+import android.location.Location;
 
 import com.google.gson.JsonObject;
 
@@ -40,14 +41,18 @@ public class NearestPlacesInteractor implements INearestPlacesInteractor, CallBa
     public void LoadNearestPlaces(int Radius) {
 
         GPSTracker mGPSTracker = new GPSTracker(mContext);
-        android.location.Location location = mGPSTracker.getLocation();
+        Location location = mGPSTracker.getLocation();
         mGPSTracker.stopUsingGPS();
-        String URL = mContext.getResources().getString(R.string.nearestLocation) +
-                location.getLatitude() + "," + location.getLongitude() +
-                mContext.getResources().getString(R.string.radius) +
-                Radius + mContext.getResources().getString(R.string.remainString) +
-                mContext.getResources().getString(R.string.googleKey);
-        JSONObjectParser jsonObjectParser = new JSONObjectParser(this);
-        jsonObjectParser.getNearestPlaces(URL);
+        if (location != null) {
+            String URL = mContext.getResources().getString(R.string.nearestLocation) +
+                    location.getLatitude() + "," + location.getLongitude() +
+                    mContext.getResources().getString(R.string.radius) +
+                    Radius + mContext.getResources().getString(R.string.remainString) +
+                    mContext.getResources().getString(R.string.googleKey);
+            JSONObjectParser jsonObjectParser = new JSONObjectParser(this);
+            jsonObjectParser.getNearestPlaces(URL);
+        } else
+            onSuccess(null);
+
     }
 }

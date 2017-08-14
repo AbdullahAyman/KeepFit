@@ -3,6 +3,7 @@ package tps.com.keepfit.DataModel;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.storage.StorageReference;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -22,6 +23,7 @@ public class CardsDataModel_ implements Parcelable {
             instance.cardImage = ((long) in.readValue((long.class.getClassLoader())));
             instance.cardVideoURL = ((String) in.readValue((String.class.getClassLoader())));
             instance.cardDuration = ((String) in.readValue((String.class.getClassLoader())));
+            instance.cardImageUrl = ((StorageReference) in.readValue((String.class.getClassLoader())));
             return instance;
         }
 
@@ -42,6 +44,9 @@ public class CardsDataModel_ implements Parcelable {
     @SerializedName("cardImage")
     @Expose
     private long cardImage;
+    @SerializedName("cardImageUrl")
+    @Expose
+    private StorageReference cardImageUrl;
     @SerializedName("cardVideoURL")
     @Expose
     private String cardVideoURL;
@@ -71,6 +76,14 @@ public class CardsDataModel_ implements Parcelable {
 
     public void setCardDescription(String cardDescription) {
         this.cardDescription = cardDescription;
+    }
+
+    public StorageReference getCardImageUrl() {
+        return cardImageUrl;
+    }
+
+    public void setCardImageUrl(StorageReference cardImageUrl) {
+        this.cardImageUrl = cardImageUrl;
     }
 
     public long getCardImage() {
@@ -104,6 +117,7 @@ public class CardsDataModel_ implements Parcelable {
         dest.writeValue(cardImage);
         dest.writeValue(cardVideoURL);
         dest.writeValue(cardDuration);
+        dest.writeValue(cardImageUrl);
     }
 
     public int describeContents() {

@@ -33,6 +33,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="16dp"
+        android:contentDescription="@string/floatingActionBtn"
         android:src="@drawable/exo_controls_play"
         app:borderWidth="0dp"
         app:fabSize="normal"

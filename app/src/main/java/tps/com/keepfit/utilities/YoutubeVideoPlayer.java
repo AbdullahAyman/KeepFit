@@ -1,6 +1,8 @@
 package tps.com.keepfit.utilities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,8 +15,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import tps.com.keepfit.DataModel.CardsDataModel_;
 import tps.com.keepfit.R;
+import tps.com.keepfit.Views.MainActivity;
 
 /**
  * Created by aayman on 8/1/2017.
@@ -22,16 +26,20 @@ import tps.com.keepfit.R;
 
 public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static String YOUTUBE_API_KEY = "AIzaSyCZ68uVweLsjZjFjNreE9jl_dSPbKlSuP4";
+    public static String YOUTUBE_API_KEY = "AIzaSyAoZJhyUC1WkIdAjG-3k10BrpNQr9RIy5o";
     static int currentStepId = 0;
     Bundle bundle;
     List<CardsDataModel_> mCardListData;
     @BindView(R.id.youtube_view)
     YouTubePlayerView youTubePlayerView;
+    @BindView(R.id.steps_description)
+    TextView stepDescription;
     @BindView(R.id.tv_next)
     TextView nextStep;
     @BindView(R.id.tv_previous)
     TextView previousStep;
+    @BindView(R.id.toolbar_title)
+    TextView titleView;
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
         @Override
         public void onBuffering(boolean arg0) {
@@ -79,19 +87,58 @@ public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
         }
     };
 
+    @OnClick(R.id.toolbar_back)
+    void goBack() {
+        Intent intent = new Intent(YoutubeVideoPlayer.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steps);
         ButterKnife.bind(this);
-
+        findViewById(R.id.toolbar_menu_img).setVisibility(View.INVISIBLE);
+        findViewById(R.id.toolbar_back).setVisibility(View.VISIBLE);
         bundle = getIntent().getExtras();
         if (bundle != null) {
             mCardListData = bundle.getParcelableArrayList(getString(R.string.mCardListOfData));
             currentStepId = bundle.getInt(getString(R.string.currentStepId));
         }
-        youTubePlayerView.initialize(YOUTUBE_API_KEY, this);
+        displayStepNo(currentStepId);
+        nextStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayStepNo(++currentStepId);
 
+            }
+        });
+        previousStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayStepNo(--currentStepId);
+            }
+
+
+        });
+
+    }
+
+    private void displayStepNo(int i) {
+        if (i >= 0) {
+            if (i >= mCardListData.size()) {
+                Toast.makeText(this, getString(R.string.lastStep), Toast.LENGTH_SHORT).show();
+                currentStepId = mCardListData.size() - 1;
+            } else {
+                stepDescription.setText(mCardListData.get(i).getCardDescription());
+                youTubePlayerView.initialize(YOUTUBE_API_KEY, this);
+                titleView.setText(mCardListData.get(i).getCardName());
+            }
+        } else {
+            Toast.makeText(this, getString(R.string.firstStep), Toast.LENGTH_SHORT).show();
+            currentStepId = 0;
+
+        }
     }
 
     @Override
@@ -103,7 +150,7 @@ public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
          *  Start buffering
          */
         if (!wasRestored) {
-            youTubePlayer.cueVideo(/*mCardListData.get(0).getCardVideoURL()*/"aJ7BoNG-r2c");
+            youTubePlayer.cueVideo(mCardListData.get(currentStepId).getCardVideoURL());
         }
     }
 
@@ -111,31 +158,5 @@ public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
         Toast.makeText(this, getString(R.string.errorLoading), Toast.LENGTH_LONG).show();
     }
-    /*private void setupView() {
-
-
-        previousStep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentStepId > 0) {
-                    currentStepId--;
-                    displayStepNo(currentStepId);
-                } else
-                    Toast.makeText(StepsActivity.this, getResources().getString(R.string.firstStep), Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        nextStep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentStepId < mCardListData.size() - 1) {
-                    currentStepId++;
-                    displayStepNo(currentStepId);
-                } else
-                    Toast.makeText(StepsActivity.this, getResources().getString(R.string.lastStep), Toast.LENGTH_SHORT).show();
-
-            }
-        });
-    }*/
 
 }

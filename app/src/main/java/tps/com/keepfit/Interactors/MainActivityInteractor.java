@@ -3,6 +3,9 @@ package tps.com.keepfit.Interactors;
 import android.content.Context;
 import android.content.res.TypedArray;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +40,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
         CardsDataModel cardsDataModel = new CardsDataModel();
         List<CardsDataModel_> cardsDataList = new ArrayList<>();
         TypedArray workOutImages = loadWorkOutImages();
+        ArrayList<StorageReference> workOutImagesUrl = loadWorkOutImagesURL();
         String[] workOutTimes = loadWorkOutTimes();
         String[] workOutNames = loadWorkOutNames();
         String[] workOutDescription = loadWorkOutDescription();
@@ -45,10 +49,12 @@ public class MainActivityInteractor implements IMainActivityInteractor {
             CardsDataModel_ cardsDataItem = new CardsDataModel_();
             cardsDataItem.setCardDescription(workOutDescription[i]);
             cardsDataItem.setCardDuration(workOutTimes[i]);
-            cardsDataItem.setCardImage(workOutImages.getResourceId(i, -1));
+            //cardsDataItem.setCardImage(workOutImages.getResourceId(i, -1));
             cardsDataItem.setCardName(workOutNames[i]);
             cardsDataItem.setCardVideoURL(workOutVideos[i]);
+            cardsDataItem.setCardImageUrl(workOutImagesUrl.get(i));
             cardsDataList.add(cardsDataItem);
+
         }
         cardsDataModel.setCardsDataModel(cardsDataList);
         return cardsDataModel;
@@ -69,6 +75,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
             cardsDataItem.setCardImage(mealsImages.getResourceId(i, -1));
             cardsDataItem.setCardName(loadMealsNames[i]);
             cardsDataItem.setCardVideoURL(loadMealsVideos[i]);
+            cardsDataItem.setCardImageUrl(null);
             cardsDataList.add(cardsDataItem);
         }
         cardsDataModel.setCardsDataModel(cardsDataList);
@@ -78,7 +85,41 @@ public class MainActivityInteractor implements IMainActivityInteractor {
 
     @Override
     public TypedArray loadWorkOutImages() {
+
         return mContext.getResources().obtainTypedArray(R.array.workout_images);
+    }
+
+    @Override
+    public ArrayList<StorageReference> loadWorkOutImagesURL() {
+        ArrayList<StorageReference> imagesUrl = new ArrayList<>();
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+        StorageReference islandRef;
+        islandRef = storageRef.child("jumping_jacks.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("wall_sits.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("push_ups.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("abdominal_crunches.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("step_ups_onto_a_chair.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("squats.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("triceps_dips_on_a_chair.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("planks.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("high_knees_running_in_place.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("lunges.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("push_ups_and_rotations.jpg");
+        imagesUrl.add(islandRef);
+        islandRef = storageRef.child("side_planks.jpg");
+        imagesUrl.add(islandRef);
+        return imagesUrl;
     }
 
     @Override

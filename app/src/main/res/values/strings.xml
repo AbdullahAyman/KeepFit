@@ -20,6 +20,11 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!--Content description labels -->
+    <string name="mapContentDescription">Map button to show nearest GYM Location on Map</string>
+    <string name="btnBackContentDescription">Back button to return to last view </string>
+    <string name="imgExercise">image to describe exercise to td </string>
+    <string name="floatingActionBtn">Action button to start practise exercises</string>
 
     <!--google ads-->
     <string name="adUnitID">ca-app-pub-3740402010807018/6661829430</string>
