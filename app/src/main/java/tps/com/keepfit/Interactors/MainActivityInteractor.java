@@ -40,7 +40,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
         CardsDataModel cardsDataModel = new CardsDataModel();
         List<CardsDataModel_> cardsDataList = new ArrayList<>();
         TypedArray workOutImages = loadWorkOutImages();
-        ArrayList<StorageReference> workOutImagesUrl = loadWorkOutImagesURL();
+        ArrayList<String> workOutImagesUrl = loadWorkOutImagesURL();
         String[] workOutTimes = loadWorkOutTimes();
         String[] workOutNames = loadWorkOutNames();
         String[] workOutDescription = loadWorkOutDescription();
@@ -90,35 +90,37 @@ public class MainActivityInteractor implements IMainActivityInteractor {
     }
 
     @Override
-    public ArrayList<StorageReference> loadWorkOutImagesURL() {
-        ArrayList<StorageReference> imagesUrl = new ArrayList<>();
+    public ArrayList<String> loadWorkOutImagesURL() {
+        ArrayList<String> imagesUrl = new ArrayList<>();
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReference();
         StorageReference islandRef;
         islandRef = storageRef.child("jumping_jacks.jpg");
-        imagesUrl.add(islandRef);
+        /*String path = islandRef+"";
+        StorageReference storageReference = storage.getReferenceFromUrl(path);*/
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("wall_sits.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("push_ups.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("abdominal_crunches.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("step_ups_onto_a_chair.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("squats.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("triceps_dips_on_a_chair.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("planks.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("high_knees_running_in_place.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("lunges.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("push_ups_and_rotations.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         islandRef = storageRef.child("side_planks.jpg");
-        imagesUrl.add(islandRef);
+        imagesUrl.add(islandRef + "");
         return imagesUrl;
     }
 

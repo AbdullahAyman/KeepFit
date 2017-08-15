@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        ButterKnife.bind(MainActivity.this);
         MobileAds.initialize(this,
                 getString(R.string.adUnitIDTest));
         AdRequest request = new AdRequest.Builder()

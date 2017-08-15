@@ -2,8 +2,6 @@ package tps.com.keepfit.Interfaces;
 
 import android.content.res.TypedArray;
 
-import com.google.firebase.storage.StorageReference;
-
 import java.util.ArrayList;
 
 /**
@@ -14,7 +12,7 @@ public interface IMainActivityInteractor {
 
     TypedArray loadWorkOutImages();
 
-    ArrayList<StorageReference> loadWorkOutImagesURL();
+    ArrayList<String> loadWorkOutImagesURL();
 
     String[] loadWorkOutTimes();
 

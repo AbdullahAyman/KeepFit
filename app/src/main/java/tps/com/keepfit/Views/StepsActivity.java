@@ -93,7 +93,7 @@ public class StepsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steps);
-        ButterKnife.bind(this);
+        ButterKnife.bind(StepsActivity.this);
 
         bundle = getIntent().getExtras();
         if (bundle != null) {

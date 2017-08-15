@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
@@ -39,11 +40,13 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
     List<CardsDataModel_> mCardListData;
     Picasso mPicasso;
     Uri uri;
-
+    FirebaseStorage storage;
     Bitmap bitmap;
+
     public MainCardsAdapter(Context context, Picasso picasso) {
         mContext = context;
         mPicasso = picasso;
+        storage = FirebaseStorage.getInstance();
     }
 
     public void swapAdapterData(List<CardsDataModel_> cardListData) {
@@ -66,7 +69,9 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
                 .load((int) mCardListData.get(position).getCardImage())
                 .error(R.drawable.jumping)
                 .into(holder.cardImage);*/
-        StorageReference mStorageReference = mCardListData.get(position).getCardImageUrl();
+        StorageReference mStorageReference = null;
+        if (mCardListData.get(position).getCardImageUrl() != null)
+            mStorageReference = storage.getReferenceFromUrl(mCardListData.get(position).getCardImageUrl());
 
 
         if (mStorageReference != null) {
