@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "978157087816",
+    "firebase_url": "https://keepfit-c90f0.firebaseio.com",
+    "project_id": "keepfit-c90f0",
+    "storage_bucket": "keepfit-c90f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978157087816:android:dc839ba970f83ba0",
+        "android_client_info": {
+          "package_name": "tps.com.keepfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978157087816-cff5q3b8kbchaj7gccii31m9fitoe24l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tps.com.keepfit",
+            "certificate_hash": "d483ae5260f0f4c87b45afa72ae8b82eb92b931b"
+          }
+        },
+        {
+          "client_id": "978157087816-iqcklduk7dls846nf8upt7ol843djeaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoZJhyUC1WkIdAjG-3k10BrpNQr9RIy5o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978157087816-iqcklduk7dls846nf8upt7ol843djeaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

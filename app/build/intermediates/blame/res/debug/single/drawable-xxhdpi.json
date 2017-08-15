@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\back.png",
+        "source": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\src\\main\\res\\drawable-xxhdpi\\back.png"
+    },
+    {
+        "merged": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\about_white.png",
+        "source": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\src\\main\\res\\drawable-xxhdpi\\about_white.png"
+    },
+    {
+        "merged": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\tool_bar_menu_icon.png",
+        "source": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\src\\main\\res\\drawable-xxhdpi\\tool_bar_menu_icon.png"
+    },
+    {
+        "merged": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\toolbar_home.png",
+        "source": "D:\\UdacityProjects\\CapStoneApp\\KeepFit\\app\\src\\main\\res\\drawable-xxhdpi\\toolbar_home.png"
+    }
+]

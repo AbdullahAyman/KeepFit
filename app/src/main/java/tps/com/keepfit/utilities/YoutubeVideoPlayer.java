@@ -131,7 +131,9 @@ public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
                 currentStepId = mCardListData.size() - 1;
             } else {
                 stepDescription.setText(mCardListData.get(i).getCardDescription());
+                youTubePlayerView.removeAllViews();
                 youTubePlayerView.initialize(YOUTUBE_API_KEY, this);
+
                 titleView.setText(mCardListData.get(i).getCardName());
             }
         } else {
@@ -152,6 +154,7 @@ public class YoutubeVideoPlayer extends YouTubeBaseActivity implements YouTubePl
         if (!wasRestored) {
             youTubePlayer.cueVideo(mCardListData.get(currentStepId).getCardVideoURL());
         }
+
     }
 
     @Override
