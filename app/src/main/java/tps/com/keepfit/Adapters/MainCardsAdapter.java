@@ -2,8 +2,6 @@ package tps.com.keepfit.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
@@ -15,9 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -39,9 +35,7 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
     Context mContext;
     List<CardsDataModel_> mCardListData;
     Picasso mPicasso;
-    Uri uri;
     FirebaseStorage storage;
-    Bitmap bitmap;
 
     public MainCardsAdapter(Context context, Picasso picasso) {
         mContext = context;
@@ -65,37 +59,16 @@ public class MainCardsAdapter extends RecyclerView.Adapter<MainCardsAdapter.Main
 
     @Override
     public void onBindViewHolder(final MainCardsHolder holder, final int position) {
-        /*mPicasso.with(mContext)
-                .load((int) mCardListData.get(position).getCardImage())
-                .error(R.drawable.jumping)
-                .into(holder.cardImage);*/
-        StorageReference mStorageReference = null;
-        if (mCardListData.get(position).getCardImageUrl() != null)
-            mStorageReference = storage.getReferenceFromUrl(mCardListData.get(position).getCardImageUrl());
+        if (mCardListData.get(position).getCardImageUrl() != null) {
 
-
-        if (mStorageReference != null) {
-            /*String childName = mStorageReference.getName();
-            try{
-                final long ONE_MEGABYTE = 1024 * 1024;
-                mStorageReference.child(childName).getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                    @Override
-                    public void onSuccess(byte[] bytes) {
-                        bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                        holder.cardImage.setImageBitmap(bitmap);
-                    }
-                });
-            }catch (Exception e){}*/
             Glide.with(mContext)
-                    .using(new FirebaseImageLoader())
-                    .load(mStorageReference)
+                    .load(mCardListData.get(position).getCardImageUrl())
                     .into(holder.cardImage);
         } else if ((int) mCardListData.get(position).getCardImage() != -1)
             Picasso.with(mContext)
                     .load((int) mCardListData.get(position).getCardImage())
                     .error(R.drawable.jumping)
                     .into(holder.cardImage);
-        //holder.cardImage.setImageResource((int) mCardListData.get(position).getCardImage());
         if (mCardListData.get(position).getCardDuration().contains(holder.Calories) || mCardListData.get(position).getCardDuration().contains(holder.unKnown))
             holder.cardDuration.setText(holder.burnedCaloriesLabel + " " + mCardListData.get(position).getCardDuration());
         else

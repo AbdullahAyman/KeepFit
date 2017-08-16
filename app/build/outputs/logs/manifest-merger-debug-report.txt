@@ -187,6 +187,8 @@ MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\aayman.VICTORYLINK.00
 MERGED from [com.baoyz.pullrefreshlayout:library:1.2.0] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\26b30704689252a2f7f4f9a023eb1884fa47b962\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.orangegangsters:swipy:1.2.3] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\11fbe2131efc938705ced90269690eb4aab42b8c\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\9d352a42f7236c0ca64fab80429c02c310be5aab\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.firebase:firebase-database:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\b5135566b2db6bc7011c315fbda4043b8b5a7614\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\daaec20bcd4ca2566b6943ea735743a4cb3ffef2\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-ads:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\1483b69840c175d5bd6df468c006cb21a9da7e0b\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\985f1ea70ac57f094cd603d922a93d09570ffd2b\output\AndroidManifest.xml:22:5-43
 MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\aayman.VICTORYLINK.000\.android\build-cache\689094b30af864b7dbc1d1f8efe357830f501f75\output\AndroidManifest.xml:17:5-43

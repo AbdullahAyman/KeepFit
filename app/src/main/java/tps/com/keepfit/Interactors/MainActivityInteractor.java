@@ -40,7 +40,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
         CardsDataModel cardsDataModel = new CardsDataModel();
         List<CardsDataModel_> cardsDataList = new ArrayList<>();
         TypedArray workOutImages = loadWorkOutImages();
-        ArrayList<String> workOutImagesUrl = loadWorkOutImagesURL();
+        //ArrayList<String> workOutImagesUrl = loadWorkOutImagesURL();
         String[] workOutTimes = loadWorkOutTimes();
         String[] workOutNames = loadWorkOutNames();
         String[] workOutDescription = loadWorkOutDescription();
@@ -52,7 +52,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
             //cardsDataItem.setCardImage(workOutImages.getResourceId(i, -1));
             cardsDataItem.setCardName(workOutNames[i]);
             cardsDataItem.setCardVideoURL(workOutVideos[i]);
-            cardsDataItem.setCardImageUrl(workOutImagesUrl.get(i));
+            //cardsDataItem.setCardImageUrl(workOutImagesUrl.get(i));
             cardsDataList.add(cardsDataItem);
 
         }
@@ -123,6 +123,7 @@ public class MainActivityInteractor implements IMainActivityInteractor {
         imagesUrl.add(islandRef + "");
         return imagesUrl;
     }
+
 
     @Override
     public String[] loadWorkOutTimes() {
